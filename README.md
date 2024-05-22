@@ -40,6 +40,7 @@ npx ts-node index.ts --radius 200 --speed 0.2 --wait 1
 - `-r, --radius <number>`: The radius of the circle that the mouse will move in. The default value is `100`.
 - `-s, --speed <number>`: The speed of the mouse movement. The default value is `0.1`.
 - `-w, --wait <number>`: The wait time in seconds between each spin cycle. The default value is `0.5`.
+- `--help`: Show help information about how to use the program and its options.
 
 ### Terminating the Program
 
