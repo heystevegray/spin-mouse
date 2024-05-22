@@ -8,25 +8,29 @@ const argv = yargs(hideBin(process.argv))
     alias: 'radius',
     type: 'number',
     default: 100,
-    describe: 'Radius of the circle',
+    describe:
+      'The radius of the circle in pixels that the mouse will move in. The default value is `100`.',
   })
   .option('s', {
     alias: 'speed',
     type: 'number',
     default: 0.1,
-    describe: 'Speed of the mouse',
+    describe:
+      'The speed in milliseconds of the mouse movement. The default value is `0.1`',
   })
   .option('w', {
     alias: 'wait',
     type: 'number',
     default: 0.5,
-    describe: 'Wait time in seconds between each spin cycle',
+    describe:
+      'The wait time in seconds between each spin cycle. The default value is `0.5`',
   })
   .option('d', {
     alias: 'debug',
     type: 'boolean',
     default: 0,
-    describe: 'Show debug information',
+    describe:
+      'Pass this option to output debug information. The default value is `false`',
   })
   .strict()
   .fail((msg, err, _yargs) => {
