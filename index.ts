@@ -22,6 +22,15 @@ const argv = yargs(hideBin(process.argv))
     default: 0.5,
     describe: 'Wait time in seconds between each spin cycle',
   })
+  .strict()
+  .fail((msg, err, _yargs) => {
+    if (err) throw err; // Preserve stack
+    console.error('Error:', msg);
+    console.error(
+      '\nTo see available options run: \nnpx ts-node index.ts --help',
+    );
+    process.exit(1);
+  })
   .parseSync();
 
 // Get the center of the screen
