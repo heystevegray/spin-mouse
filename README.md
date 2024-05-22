@@ -19,6 +19,14 @@ cd spin-mouse
 npm install
 ```
 
+or
+
+```bash
+git clone https://github.com/heystevegray/spin-mouse.git
+cd spin-mouse
+npm install
+```
+
 ## Usage
 
 You can run the application with `npx ts-node index.ts` followed by any options you want to use:
