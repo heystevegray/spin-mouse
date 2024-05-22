@@ -1,8 +1,8 @@
 - [spin-mouse](#spin-mouse)
 	- [Installation](#installation)
 	- [Usage](#usage)
-		- [Terminating the Program](#terminating-the-program)
 		- [Options](#options)
+		- [Terminating the Program](#terminating-the-program)
 	- [How It Works](#how-it-works)
 
 # spin-mouse
@@ -27,6 +27,12 @@ You can run the application with `npx ts-node index.ts` followed by any options 
 npx ts-node index.ts --radius 200 --speed 0.2 --wait 1
 ```
 
+### Options
+
+- `-r, --radius <number>`: The radius of the circle that the mouse will move in. The default value is `100`.
+- `-s, --speed <number>`: The speed of the mouse movement. The default value is `0.1`.
+- `-w, --wait <number>`: The wait time in seconds between each spin cycle. The default value is `0.5`.
+
 ### Terminating the Program
 
 The program can be terminated in two ways:
@@ -35,11 +41,7 @@ The program can be terminated in two ways:
 
 2. **Keyboard Interrupt:** You can also stop the program by using the keyboard interrupt command. On most systems, this is `Command + C`.
 
-### Options
 
-- `-r, --radius <number>`: The radius of the circle that the mouse will move in. The default value is `100`.
-- `-s, --speed <number>`: The speed of the mouse movement. The default value is `0.1`.
-- `-w, --wait <number>`: The wait time in seconds between each spin cycle. The default value is `0.5`.
 
 ## How It Works
 
