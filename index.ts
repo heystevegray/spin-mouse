@@ -22,6 +22,12 @@ const argv = yargs(hideBin(process.argv))
     default: 0.5,
     describe: 'Wait time in seconds between each spin cycle',
   })
+  .option('d', {
+    alias: 'debug',
+    type: 'boolean',
+    default: 0,
+    describe: 'Show debug information',
+  })
   .strict()
   .fail((msg, err, _yargs) => {
     if (err) throw err; // Preserve stack
@@ -47,12 +53,18 @@ function moveMouseInCircle() {
     const y = centerY + argv.r * Math.sin((i * Math.PI) / 180);
     isProgrammaticMove = true;
     robot.moveMouseSmooth(x, y, argv.s);
+    if (argv.d) {
+      console.log(`\tMoving to (${x.toFixed(2)}px, ${y.toFixed(2)}px)`);
+    }
     isProgrammaticMove = false;
   }
 }
 
 // Function to start the cycle
 function startCycle() {
+  if (argv.d) {
+    console.log('Screen size:', screenSize);
+  }
   // Start moving the mouse
   robot.setMouseDelay(argv.s);
   moveMouseInCircle();
@@ -65,7 +77,7 @@ const waitTime = argv.w > 0 ? argv.w : 0.5;
 
 // Repeat the cycle every wait minutes, with a wait time in between
 let intervalId = setInterval(() => {
-  setTimeout(startCycle, waitTime * 1000);
+  startCycle();
 }, waitTime * 1000);
 
 // Handle CTRL+C

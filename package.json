@@ -1,14 +1,14 @@
 {
   "name": "spin-mouse",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fake productivity.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node index.ts"
+    "start": "ts-node index.ts --radius 200 --speed 0.2 --wait 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Steve Gray",
   "license": "ISC",
   "dependencies": {
     "prettier": "^3.2.5",
