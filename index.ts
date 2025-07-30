@@ -77,7 +77,7 @@ function moveMouseInCircle() {
 }
 
 // Function to start the cycle
-function startCycle() {
+function startSpinning() {
   // if (argv.d) {
   //   console.log('Screen size:', screenSize);
   // }
@@ -104,7 +104,7 @@ const formatDuration = () => {
 
 // Repeat the cycle every wait minutes, with a wait time in between
 let intervalId = setInterval(() => {
-  startCycle();
+  startSpinning();
 }, waitTime * 1000);
 
 const exit = () => {
@@ -150,7 +150,7 @@ const main = () => {
   console.log('\nPress CTRL+C to stop\n');
 
   // Start the cycle
-  startCycle();
+  startSpinning();
 };
 
 main();
