@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node index.ts --radius 200 --speed 0.2 --wait 1"
+    "start": "ts-node index.ts --radius 200 --speed 0.2 --wait 5"
   },
   "keywords": [],
   "author": "Steve Gray",
   "license": "ISC",
   "dependencies": {
+    "dayjs": "^1.11.13",
     "prettier": "^3.2.5",
     "robotjs": "^0.6.0",
     "ts-node": "^10.9.2",
