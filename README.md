@@ -6,10 +6,9 @@
 </div>
 <div align="center">
   <h3>spin-mouse</h3>
-  <p>A Node.js application to spin your mouse in customizable shapes.</p>
 </div>
 
-This is a [Node.js](https://nodejs.org/en) application that uses the [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file) library to spin your mouse in different shapes.
+A [Node.js](https://nodejs.org/en) application that uses the [robotjs](https://github.com/octalmage/robotjs?tab=readme-ov-file) library to spin your mouse in different shapes.
 
 - [Usage](#usage)
 	- [Default Circle Shape](#default-circle-shape)
