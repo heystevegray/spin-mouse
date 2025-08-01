@@ -6,9 +6,10 @@
 </div>
 <div align="center">
   <h3>spin-mouse</h3>
+  <p>A <a href="https://nodejs.org/en">Node.js</a> application that uses the <a href="https://github.com/octalmage/robotjs?tab=readme-ov-file">robotjs</a> library to spin your mouse in different shapes.</p>
 </div>
 
-A [Node.js](https://nodejs.org/en) application that uses the [robotjs](https://github.com/octalmage/robotjs?tab=readme-ov-file) library to spin your mouse in different shapes.
+
 
 - [Usage](#usage)
 	- [Default Circle Shape](#default-circle-shape)
