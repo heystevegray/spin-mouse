@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import * as robot from "robotjs";
