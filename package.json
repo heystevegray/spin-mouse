@@ -4,6 +4,7 @@
   "description": "Fake productivity.",
   "main": "index.js",
   "files": [
+    "public",
     "dist"
   ],
   "scripts": {
@@ -12,7 +13,8 @@
     "build": "tsc",
     "release": "npx np",
     "test": "vitest",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "mouse",
