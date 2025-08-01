@@ -55,4 +55,4 @@ The program can be terminated in two ways:
 
 ## How It Works
 
-The application first parses the command-line arguments using the [yargs](https://www.npmjs.com/package/yargs) library. It then gets the size of the screen using [`robotjs`](https://robotjs.io/), and uses this information along with the provided options to calculate the path of the mouse movement. The mouse is then moved in a circle on the screen using [`robotjs`](https://robotjs.io/).
+The application first parses the command-line arguments using the [yargs](https://www.npmjs.com/package/yargs) library. It then gets the size of the screen using [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file), and uses this information along with the provided options to calculate the path of the mouse movement. The mouse is then moved in a circle on the screen using [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file).

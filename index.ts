@@ -52,9 +52,9 @@ const screenSize = robot.getScreenSize();
 const centerX = screenSize.width / 2;
 const centerY = screenSize.height / 2;
 let spinCount = 0;
-let startTime = dayjs();
+const startTime = dayjs();
 
-let isProgrammaticMove = false;
+// let isProgrammaticMove = false;
 
 // Function to move the mouse in a circle
 function moveMouseInCircle() {
@@ -67,12 +67,12 @@ function moveMouseInCircle() {
   for (let i = 0; i < 360; i += 3) {
     const x = centerX + argv.r * Math.cos((i * Math.PI) / 180);
     const y = centerY + argv.r * Math.sin((i * Math.PI) / 180);
-    isProgrammaticMove = true;
+    // isProgrammaticMove = true;
     robot.moveMouseSmooth(x, y, argv.s);
     // if (argv.d) {
     //   console.log(`\tMoving to (${x.toFixed(2)}px, ${y.toFixed(2)}px)`);
     // }
-    isProgrammaticMove = false;
+    // isProgrammaticMove = false;
   }
 }
 
@@ -103,7 +103,7 @@ const formatDuration = () => {
 };
 
 // Repeat the cycle every wait minutes, with a wait time in between
-let intervalId = setInterval(() => {
+const intervalId = setInterval(() => {
   startSpinning();
 }, waitTime * 1000);
 
@@ -122,21 +122,21 @@ process.on('SIGINT', () => {
   exit();
 });
 
-// Check for mouse movement
-let lastPos = robot.getMousePos();
+// // Check for mouse movement
+// let lastPos = robot.getMousePos();
 
-setInterval(() => {
-  let currentPos = robot.getMousePos();
-  // if (
-  //   !isProgrammaticMove &&
-  //   (currentPos.x !== lastPos.x || currentPos.y !== lastPos.y)
-  // ) {
-  //   console.log('Mouse moved by user, stopping...');
-  //   exit();
-  // }
+// setInterval(() => {
+//   let currentPos = robot.getMousePos();
+//   // if (
+//   //   !isProgrammaticMove &&
+//   //   (currentPos.x !== lastPos.x || currentPos.y !== lastPos.y)
+//   // ) {
+//   //   console.log('Mouse moved by user, stopping...');
+//   //   exit();
+//   // }
 
-  lastPos = currentPos;
-}, 100);
+//   lastPos = currentPos;
+// }, 100);
 
 const main = () => {
   // Log config
