@@ -1,6 +1,6 @@
 {
   "name": "spin-mouse",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fake productivity.",
   "main": "index.js",
   "files": [
