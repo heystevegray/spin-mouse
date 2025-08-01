@@ -1,8 +1,8 @@
 <br/>
 
 <div align="center">
-  <img src="./public/logo.png#gh-dark-mode-only" />
-  <img src="./public/logo-white.png#gh-light-mode-only" />
+  <img src="./public/logo.png#gh-light-mode-only" />
+  <img src="./public/logo-white.png#gh-dark-mode-only" />
 </div>
 <div align="center">
   <h3>spin-mouse</h3>
