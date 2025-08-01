@@ -54,19 +54,17 @@ npm install
 
 ### Options
 
-- `-r, --radius <number>`: The radius of the circle in pixels that the mouse will move in. The default value is `200`. Choices are `[100, 200, 300, 400, 500]`.
+- `-r, --radius <number>`: The radius of the shape in pixels that the mouse will move in. The default value is `200`. Choices are `[100, 200, 300, 400, 500]`.
 - `-s, --speed <number>`: The speed in milliseconds of the mouse movement. The default value is `0.2`. Choices are `[0.1, 0.2, 0.3, 0.4, 0.5]`.
 - `-x, --shape <string>`: The shape of the mouse movement. The default value is `circle`. Choices are `[circle, square, triangle, sinwave, coswave, heart, boobs, dick]`.
 - `-w, --wait <number>`: The wait time in seconds between each spin cycle. The default value is `5`. Choices are `[5, 10, 15]`.
-- `-d, --debug <boolean>`: Pass this option to output debug information. The default value is `false`.
+- `-d, --debug <boolean>`: Show debug information. The default is `false`.
 - `-h, --help`: Show help information about how to use the program and its options.
 
 ### Terminating the Program
 
 1. **Keyboard Interrupt:** You can stop the program by using the keyboard interrupt command. On most systems, this is `Command + C`. Or in a panic, quit the terminal. The wait time is at least 5 seconds between spins so you have 5 seconds to drive the mouse at a minimum.
 
-
-
 ## How It Works
 
-The application first parses the command-line arguments using the [yargs](https://www.npmjs.com/package/yargs) library. It then gets the size of the screen using [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file), and uses this information along with the provided options to calculate the path of the mouse movement. The mouse is then moved in a circle on the screen using [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file).
+The application first parses the command-line arguments using the [yargs](https://www.npmjs.com/package/yargs) library. It then gets the size of the screen using [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file), and uses this information along with the provided options to calculate the path of the mouse movement. The mouse is then moved in a shape on the screen using [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file).

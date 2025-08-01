@@ -198,10 +198,7 @@ const argv = yargs(hideBin(process.argv))
 	})
 	.option("d", {
 		alias: "debug",
-		type: "boolean",
-		choices: [0, 1],
-		default: 0,
-		describe: "Pass this option to output debug information.",
+		describe: "Show debug information",
 	})
 	.strict()
 	.alias("help", "h")
@@ -226,6 +223,9 @@ const startTime = dayjs();
 const shape: Shape = argv.x as Shape;
 const waitTime = argv.w;
 const debug = argv.d;
+
+console.log({ debug });
+
 const radius = argv.r;
 const speed = argv.s;
 
@@ -248,9 +248,6 @@ function moveMouseInShape() {
 
 // Function to start the cycle
 function startSpinning() {
-	if (debug) {
-		console.log("Screen size:", screenSize);
-	}
 	// Start moving the mouse
 	robot.setMouseDelay(speed);
 	moveMouseInShape();
@@ -286,11 +283,17 @@ const exit = () => {
 
 // Handle CTRL+C
 process.on("SIGINT", () => {
-	// console.log("\nGracefully stopping...");
+	if (debug) {
+		console.log("\nGracefully stopping...");
+	}
 	exit();
 });
 
 const main = () => {
+	if (debug) {
+		console.log("Screen size:", screenSize);
+	}
+
 	console.log("Configuration:");
 	for (const [key, value] of Object.entries(argv)) {
 		if (key.length > 1 && !key.includes("$")) {
