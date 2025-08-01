@@ -7,14 +7,17 @@
     "public",
     "dist"
   ],
+  "bin": {
+    "spin-mouse": "./dist/index.js"
+  },
   "scripts": {
     "dev": "ts-node src/index.ts --radius 200 --speed 0.2 --wait 5 -x square",
-    "start": "node index.js",
+    "start": "node dist/index.js",
     "build": "tsc",
     "release": "npx np",
     "test": "vitest",
     "format": "biome format --write",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mouse",
