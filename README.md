@@ -1,5 +1,7 @@
 - [spin-mouse](#spin-mouse)
 	- [Installation](#installation)
+		- [ssh](#ssh)
+		- [https](#https)
 	- [Usage](#usage)
 		- [Options](#options)
 		- [Terminating the Program](#terminating-the-program)
@@ -7,20 +9,20 @@
 
 # spin-mouse
 
-This is a [Node.js](https://nodejs.org/en) application that uses the [`robotjs`](https://robotjs.io/) library to move the mouse in a circle on the screen. It accepts several command-line arguments to customize the behavior of the mouse movement.
+This is a [Node.js](https://nodejs.org/en) application that uses the [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file) library to move the mouse in a circle on the screen. It accepts several command-line arguments to customize the behavior of the mouse movement.
 
 ## Installation
 
 First, make sure you have [Node.js installed](https://nodejs.org/en/download/package-manager) on your machine. Then, clone this repository and install the dependencies:
 
+### ssh
 ```bash
 git clone git@github.com:heystevegray/spin-mouse.git
 cd spin-mouse
 npm install
 ```
 
-or
-
+### https
 ```bash
 git clone https://github.com/heystevegray/spin-mouse.git
 cd spin-mouse
@@ -32,7 +34,7 @@ npm install
 You can run the application with `npx ts-node index.ts` followed by any options you want to use:
 
 ```bash
-npx ts-node index.ts --radius 200 --speed 0.2 --wait 1
+npx ts-node index.ts --radius 200 --speed 0.2 --wait 5
 ```
 
 ### Options
@@ -41,15 +43,11 @@ npx ts-node index.ts --radius 200 --speed 0.2 --wait 1
 - `-s, --speed <number>`: The speed in milliseconds of the mouse movement. The default value is `0.1`.
 - `-w, --wait <number>`: The wait time in seconds between each spin cycle. The default value is `0.5`.
 - `-d, --debug <boolean>`: Pass this option to output debug information. The default value is `false`.
-- `--help`: Show help information about how to use the program and its options.
+- `-h, --help`: Show help information about how to use the program and its options.
 
 ### Terminating the Program
 
-The program can be terminated in two ways:
-
-1. **User-Initiated Mouse Movement:** If the mouse is moved manually, the program will detect this action and terminate automatically.
-
-2. **Keyboard Interrupt:** You can also stop the program by using the keyboard interrupt command. On most systems, this is `Command + C`.
+1. **Keyboard Interrupt:** You can stop the program by using the keyboard interrupt command. On most systems, this is `Command + C`. Or in a panic, quit the terminal. The wait time is at least 5 seconds between spins so you have 5 seconds to drive the mouse at a minimum.
 
 
 
