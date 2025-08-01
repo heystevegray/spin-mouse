@@ -8,7 +8,7 @@
   <h3>spin-mouse</h3>
 </div>
 
-<br/>
+This is a [Node.js](https://nodejs.org/en) application that uses the [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file) library to spin your mouse in different shapes. It accepts several command-line arguments to customize the behavior of the mouse movement.
 
 - [Usage](#usage)
 - [Installation](#installation)
@@ -18,7 +18,7 @@
 	- [Terminating the Program](#terminating-the-program)
 - [How It Works](#how-it-works)
 
-This is a [Node.js](https://nodejs.org/en) application that uses the [`robotjs`](https://github.com/octalmage/robotjs?tab=readme-ov-file) library to spin your mouse in different shapes. It accepts several command-line arguments to customize the behavior of the mouse movement.
+
 
 ## Usage
 
